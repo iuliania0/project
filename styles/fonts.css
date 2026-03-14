@@ -1,15 +1,22 @@
 @font-face {
-    font-family: 'Urania';
-    src: url(../fonts/Urania-Regular.ttf);
+    font-family: 'Inter';
+    src: url(../fonts/Inter-Regular.otf);
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Urania-Light';
-    src: url(../fonts/Urania-Light.ttf);
+    font-family: 'AcidGrotesk';
+    src: url(../fonts/AcidGrotesk-Regular.otf);
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+/* @font-face {
+    font-family: 'Urania-ExtraLight';
+    src: url(../fonts/Urania-ExtraLight.ttf);
+    font-style: normal;
+    font-display: swap;
+} */
