@@ -177,6 +177,13 @@ main img{
     cursor: pointer;
 }
 
+.svg_plus_active {
+    border-radius: 180px;
+    cursor: pointer;
+    fill: #161616;
+    stroke: #F1F1F1;
+}
+
 .testimonials_container {
     display: flex;
     justify-content: space-between;
@@ -234,7 +241,7 @@ footer img {
     height: 85px;
 }
 
-footer h1 {
+.footer_info p {
     margin-top: 95px;
     margin-bottom: 95px;
     text-align: left;
@@ -263,7 +270,7 @@ footer button {
     align-items: center;
 }
 
-.footer_nav_container h2{
+.footer_nav_container span{
     margin: 0;
     font-size: 18px;
     font-family: 'Inter', serif;
@@ -287,5 +294,10 @@ footer button {
 .footer_nav__link {
     text-decoration: none;
     color: #939393;
+}
+
+
+li:first-child .footer_nav__link {
+    color: #F1F1F1;
 }
 
