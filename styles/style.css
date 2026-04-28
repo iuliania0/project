@@ -26,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #141414;
+    background-color: #161616;
 }
 
 .navigation_container {
@@ -38,13 +38,14 @@ body {
     width: 1293px;
 }
 
-.navigation_container h1{
+.navigation_container a{
     margin: 0;
     font-size: 18px;
     font-family: 'Inter', serif;
     font-weight: 400;
     line-height: 160%;
     color: #F1F1F1;
+    text-decoration: none;
 }
 
 .nav{
@@ -151,7 +152,7 @@ main img{
     border: none;
 }
 
-.worklist_item h4 {
+.worklist_item h3 {
     font-family: 'AcidGrotesk', sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -320,7 +321,7 @@ li:first-child .footer_nav__link {
     height: 297px;
 }
 
-.contact_container h2  {
+.title_contact_info {
     margin: 0;
     margin-bottom: 30px;
     font-family: 'Inter', serif;
@@ -331,19 +332,13 @@ li:first-child .footer_nav__link {
 }
 
 .contact_container h3 {
-    margin: 0;
-    margin-bottom: 30px;
     margin-top: 50px;
-    font-family: 'Inter', serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 160%;
-    color: #939393;
 }
 
 .contact_info_cont {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .contact_info {
@@ -362,4 +357,77 @@ li:first-child .footer_nav__link {
     font-weight: 400;
     line-height: 140%;
     color: #F1F1F1;
+}
+
+.contact_title {
+    font-family: 'AcidGrotesk', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #F1F1F1;
+    margin-top: 135px;
+    margin-bottom: 71px;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__label {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-family: 'Inter', serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    color: #f1f1f1;
+}
+
+.contact__label:first-child {
+    margin-top: 0;
+}
+
+.contact__input {
+    margin: 0;
+    font-family: 'AcidGrotesk', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #f1f1f1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #F1F1F1;
+    padding-bottom: 12px;
+}
+
+.contact__textarea {
+    margin: 0;
+    min-height: 158px;
+    resize: none;
+    font-family: 'AcidGrotesk', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #f1f1f1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #F1F1F1;
+    padding-bottom: 12px;
+}
+
+.contact__button {
+    align-self: flex-start;
+    width: auto;
+    margin-top: 40px;
+    padding: 14px 28px;
+    font-family: 'Inter', serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 170px;
+    background: #F1F1F1;
+    color: #161616;
+    cursor: pointer;
 }
