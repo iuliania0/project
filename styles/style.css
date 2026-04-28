@@ -10,7 +10,7 @@ body {
     background-color: #F1F1F1;
 }
 
-header{
+.main_header{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -19,6 +19,13 @@ header{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-color: #141414;
+}
+
+.contact_header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: #141414;
 }
 
@@ -64,7 +71,7 @@ header{
     font-family: 'AcidGrotesk', sans-serif;
     font-size: 150px;
     font-weight: 400;
-    color: #F1F1F1;  
+    color: #F1F1F1;
 }
 
 .main_container {
@@ -72,11 +79,15 @@ header{
     width: 1280px;
 }
 
+.contact_main_container {
+    background-color: #161616;
+}
+
 main {
     flex-grow: 1;
 }
 
-main h3{
+.main_title {
     margin: 0;
     font-family: 'AcidGrotesk', sans-serif;
     font-size: 40px;
@@ -220,11 +231,12 @@ footer {
 
 .footer_container {
     width: 1293px;
-    margin: 136px auto;
+    margin: 0 auto;
     margin-bottom: 32px;
 }
 
 .footer_info {
+    margin-top: 136px;
     margin-bottom: 119px;
 }
 
@@ -240,7 +252,7 @@ footer img {
     font-family: 'AcidGrotesk', sans-serif;
     font-size: 91px;
     font-weight: 400;
-    color: #F1F1F1; 
+    color: #F1F1F1;
 }
 
 footer button {
@@ -293,3 +305,61 @@ li:first-child .footer_nav__link {
     color: #F1F1F1;
 }
 
+.contact_container {
+    display: grid;
+    grid-template-columns: 624px 2fr;
+    margin: auto;
+    width: 1280px;
+    margin-top: 154px;
+    margin-bottom: 248px;
+}
+
+.contact_container img {
+    margin-bottom: 176px;
+    width: 297px;
+    height: 297px;
+}
+
+.contact_container h2  {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: 'Inter', serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    color: #939393;
+}
+
+.contact_container h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-family: 'Inter', serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    color: #939393;
+}
+
+.contact_info_cont {
+    margin: 0;
+    padding: 0;
+}
+
+.contact_info {
+    font-family: 'AcidGrotesk', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 140%;
+    list-style-type: none;
+    color: #F1F1F1;
+}
+
+.contact_nav__link {
+    text-decoration: none;
+    font-family: 'AcidGrotesk', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #F1F1F1;
+}
