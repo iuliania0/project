@@ -2,10 +2,14 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 40px;
+}
+
 body {
     margin: 0;
     display: flex;
-    height: 100%;
+    height: 100vh;
     flex-direction: column;
     background-color: #F1F1F1;
 }
@@ -17,9 +21,10 @@ body {
     min-height: 900px;
     background-image: url("../images/main_image.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: center top;
     background-color: #141414;
+    padding: 0 20px;
 }
 
 .contact_header {
@@ -29,18 +34,25 @@ body {
     background-color: #161616;
 }
 
+.burger_button {
+    display: none;
+    margin-left: auto;
+    cursor: pointer;
+}
+
 .navigation_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     padding-top: 26px;
-    width: 1293px;
+    width: 100%;
+    max-width: 1280px;
 }
 
 .navigation_container a{
     margin: 0;
-    font-size: 18px;
+    font-size: 0.45rem;
     font-family: 'Inter', serif;
     font-weight: 400;
     line-height: 160%;
@@ -54,10 +66,10 @@ body {
     display: flex;
     list-style-type: none;
     font-family: 'Inter', serif;
-    font-size: 18px;
+    font-size: 0.45rem;
     font-weight: 400;
     line-height: 160%;
-    gap: 40px;
+    gap: 1rem;
 }
 
 .nav__link {
@@ -65,19 +77,42 @@ body {
     color: #F1F1F1;
 }
 
-.title {
+.title_anim-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
     margin-top: auto;
-    margin-bottom: 49px;
+    margin-bottom: 1.225rem;
+}
+
+.title {
+    width: max-content;
     text-align: center;
     font-family: 'AcidGrotesk', sans-serif;
-    font-size: 150px;
+    font-size: 3.75rem;
+    white-space: nowrap;
     font-weight: 400;
     color: #F1F1F1;
+    padding: 0;
+    padding-right: 1rem;
+    margin: 0;
+
+    animation: title_anim 30s linear infinite;
+}
+
+@keyframes title_anim {
+    0% {
+        transform: translate3d(0, 0, 0); /* Начинаем полностью за правым краем экрана */
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0); /* Уходим полностью за левый край экрана */
+    }
 }
 
 .main_container {
-    margin: auto;
-    width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
 }
 
 .contact_main_container {
@@ -177,9 +212,15 @@ main img{
     height: 68px;
 }
 
+.worklist_item img {
+    max-width: 301px;
+    max-height: 169px;
+}
+
 .svg_plus {
     border-radius: 180px;
     cursor: pointer;
+    transition: background-color 0.4s ease;
 }
 
 .svg_plus_active {
@@ -187,6 +228,7 @@ main img{
     cursor: pointer;
     fill: #161616;
     stroke: #F1F1F1;
+    transition: background-color 0.4s ease;
 }
 
 .testimonials_container {
@@ -198,7 +240,7 @@ main img{
 }
 
 .review_container {
-    width: 839px;
+    max-width: 839px;
 }
 
 .reviewer_container {
@@ -206,7 +248,7 @@ main img{
     align-items: center;
     margin-top: 28px;
     margin-bottom: 120px;
-    gap: 12px;
+    column-gap: 12px;
 }
 
 .reviewer_container img {
@@ -214,12 +256,17 @@ main img{
     height: 64px;
 }
 
+.reviewer_info_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
 .reviewer_text{
-    margin: 0 auto;
+    margin: 0;
     font-family: 'Inter', serif;
     font-size: 14px;
     font-weight: 400;
-    font-style: normal;
     line-height: 160%;
     color: #161616;
 }
@@ -231,40 +278,41 @@ footer {
 }
 
 .footer_container {
-    width: 1293px;
+    width: 100%;
+    max-width: 1293px;
     margin: 0 auto;
-    margin-bottom: 32px;
+    margin-bottom: 0.8rem;
 }
 
 .footer_info {
-    margin-top: 136px;
-    margin-bottom: 119px;
+    margin-top: 3.4rem;
+    margin-bottom: 2.975rem;
 }
 
 footer img {
-    width: 85px;
-    height: 85px;
+    width: 2.125rem;
+    height: 2.125rem;
 }
 
 .footer_info p {
-    margin-top: 95px;
-    margin-bottom: 95px;
+    margin-top: 2.375rem;
+    margin-bottom: 2.375rem;
     text-align: left;
     font-family: 'AcidGrotesk', sans-serif;
-    font-size: 91px;
+    font-size: 2.275rem;
     font-weight: 400;
     color: #F1F1F1;
 }
 
 footer button {
-    padding: 14px 28px;
+    padding: 0.35rem 0.7rem;
     border: none;
-    border-radius: 170px;
+    border-radius: 4.25rem;
     background: #F1F1F1;
     color: #161616;
     cursor: pointer;
     font-family: 'Inter', serif;
-    font-size: 18px;
+    font-size: 0.45rem;
     font-weight: 400;
 }
 
@@ -277,7 +325,7 @@ footer button {
 
 .footer_nav_container span{
     margin: 0;
-    font-size: 18px;
+    font-size: 0.45rem;
     font-family: 'Inter', serif;
     font-weight: 400;
     line-height: 160%;
@@ -290,19 +338,20 @@ footer button {
     display: flex;
     list-style-type: none;
     font-family: 'Inter', serif;
-    font-size: 18px;
+    font-size: 0.45rem;
     font-weight: 400;
     line-height: 160%;
-    gap: 40px;
+    gap: 1rem;
 }
 
 .footer_nav__link {
     text-decoration: none;
     color: #939393;
+    transition: color 0.3s ease; 
 }
 
 
-li:first-child .footer_nav__link {
+.footer_nav__link:hover {
     color: #F1F1F1;
 }
 
@@ -430,4 +479,138 @@ li:first-child .footer_nav__link {
     background: #F1F1F1;
     color: #161616;
     cursor: pointer;
+}
+
+@media screen and (max-width:1280px){
+
+    .main_header{
+        background-color: transparent;
+        min-height: 600px;
+    }
+
+    .navigation_container {
+        padding: 26px 60px;
+    }
+
+    .title{
+        font-size: 130px;
+    }
+
+    .main_container {
+        max-width: 1200px;
+        padding: 0 60px;
+    }
+
+    main p{
+        font-size: 32px;
+    }
+
+    .main_title {
+        font-size: 32px;
+    }
+
+    .about_container {
+        grid-template-columns: 350px 1fr;
+        margin: 142px auto 0;
+        padding-bottom: 138px;
+    }
+
+    .work_container {
+        grid-template-columns: 350px 1fr;
+        margin: 95px auto 0;
+        padding-bottom: 138px;
+    }
+
+    .testimonials_container {
+        grid-template-columns: 350px 1fr;
+        margin: 138px auto 0;
+        margin-bottom: 79px;
+    }
+
+    .reviewer_container {
+        margin-top: 28px;
+        margin-bottom: 90px;
+        column-gap: 12px;
+    }
+
+    .worklist_item h3 {
+        font-size: 32px;
+    }
+
+    .footer_nav_container {
+        padding: 0px 60px;
+    }
+
+    .footer_info{
+        padding: 0px 60px;
+    }
+}
+
+@media screen and (max-width:1024px){
+
+    html {
+        font-size: 32px; 
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .main_header{
+        background-color: #141414;
+        min-height: 600px;
+    }
+
+    .main_container {
+        padding: 0 40px;
+    }
+
+    .about_container, 
+    .work_container, 
+    .testimonials_container {
+        grid-template-columns: 1fr; 
+        margin-top: 80px;
+        padding-bottom: 80px;
+        gap: 40px;
+    }
+
+    main p{
+        font-size: 28px;
+    }
+
+    .main_title {
+        font-size: 28px;
+    }
+    
+    .worklist_item h3 {
+        font-size: 28px;
+    }
+
+    .burger_button {
+        display: block;
+    }
+
+    .navigation_container {
+        padding: 26px 40px;
+    }
+
+    .contact_container {
+        grid-template-columns: 1fr; /* Контакты тоже в одну колонку */
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer_info p{
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .nav{
+        display: none;
+    }
+
+    .burger_button {
+        display: block;
+    }
 }
