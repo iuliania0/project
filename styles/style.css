@@ -218,17 +218,33 @@ main img{
 }
 
 .svg_plus {
-    border-radius: 180px;
     cursor: pointer;
-    transition: background-color 0.4s ease;
 }
 
-.svg_plus_active {
-    border-radius: 180px;
-    cursor: pointer;
-    fill: #161616;
+.svg_plus rect {
+    transition: stroke 0.3s ease, fill 0.3s ease;
+}
+
+.svg_plus path {
+    transition: fill 0.3s ease;
+}
+
+.svg_plus:hover rect {
     stroke: #F1F1F1;
-    transition: background-color 0.4s ease;
+    fill: #161616;
+}
+
+.svg_plus:hover path {
+    fill: #F1F1F1;
+}
+
+.svg_plus.active rect {
+    stroke: #F1F1F1;
+    fill: #161616;
+}
+
+.svg_plus.active path {
+    fill: #F1F1F1;
 }
 
 .testimonials_container {
