@@ -619,6 +619,7 @@ footer button {
         grid-template-columns: 1fr; 
         margin-top: 60px;
         gap: 40px;
+        padding-bottom: 100px;
     }
 
     .testimonials_container {
@@ -696,6 +697,24 @@ footer button {
     }
 
     .testimonials_container {
+        margin-bottom: 0;
+    }
+
+    .worklist_item {
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+    
+    .worklist_item button {
+        order: 1;
+    }
+    
+    .worklist_item img {
+        order: 2;
+        width: 100%;
+        max-width: 301px;
+        margin: 20px auto;
         margin-bottom: 0;
     }
 
